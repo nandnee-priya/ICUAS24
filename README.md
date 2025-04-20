@@ -1,1 +1,6 @@
 # ICUAS24
+This repository implements a ROS-based autonomous drone system designed for precision agriculture applications in greenhouse environments. The solution was developed for the ICuas 24 Challenge, focusing on navigation and computer vision-based plant monitoring.
+
+The system combines path planning, position control, and real-time image processing to autonomously survey plant beds while identifying and counting fruits. The drone follows an optimized inspection route, maintaining precise positioning at each waypoint to capture high-quality images for analysis. We have implemented a custom path planning algorithm that generates efficient inspection trajectories through 3D space. There is a computer vision pipelines using OpenCV for fruit detection via HSV color thresholding and contour analysis and position control uses MAVROS for stable hovering during image capture. We have also included a duplicate detection logic to prevent double-counting fruits from multiple viewpoints.
+
+The implementation is containerized using Docker for reliable deployment across different platforms. The modular architecture separates navigation, vision processing, and mission control, making the system adaptable to various greenhouse configurations and plant types.
